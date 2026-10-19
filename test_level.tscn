@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bsbah1ni3mu5r"]
+
+[ext_resource type="PackedScene" uid="uid://ywxml7xqy303" path="res://test_platform.tscn" id="1_f7g2b"]
+[ext_resource type="Script" uid="uid://jrx8h4x3j11s" path="res://player.gd" id="1_gojnm"]
+[ext_resource type="Texture2D" uid="uid://dfjgp1aytg607" path="res://icon.svg" id="2_1c2mv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1c2mv"]
+size = Vector2(127, 126)
+
+[node name="TestLevel" type="Node2D" unique_id=934669096]
+
+[node name="TestPlatform2" parent="." unique_id=1471515171 instance=ExtResource("1_f7g2b")]
+position = Vector2(514, 527)
+
+[node name="TestPlatform3" parent="." unique_id=21757825 instance=ExtResource("1_f7g2b")]
+position = Vector2(239, 530)
+
+[node name="Players" type="CharacterBody2D" parent="." unique_id=1095039207]
+script = ExtResource("1_gojnm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Players" unique_id=1308199420]
+position = Vector2(273, 240)
+texture = ExtResource("2_1c2mv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Players" unique_id=998283192]
+position = Vector2(274, 242)
+shape = SubResource("RectangleShape2D_1c2mv")
